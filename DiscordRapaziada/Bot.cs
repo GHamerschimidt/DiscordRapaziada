@@ -43,7 +43,8 @@ namespace DiscordRapaziada
             {
                 StringPrefixes = new[] {configJson.Prefix},
                 EnableDms = false,
-                EnableMentionPrefix = true // instead of the prefix you can actually just call the bot at Bot "command"
+                EnableMentionPrefix = true, // instead of the prefix you can actually just call the bot at Bot "command"
+                DmHelp = true,
             };
 
             Commands = Client.UseCommandsNext(commandsConfig);
