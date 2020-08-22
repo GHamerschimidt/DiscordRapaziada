@@ -65,6 +65,7 @@ namespace DiscordRapaziada
             Commands = Client.UseCommandsNext(commandsConfig);
 
             Commands.RegisterCommands<BasicCommands>();
+            Commands.RegisterCommands<TeamCommands>();
 
             await Client.ConnectAsync();
 
