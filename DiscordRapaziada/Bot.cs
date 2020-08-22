@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using DiscordRapaziada.Commands;
 
 namespace DiscordRapaziada
 {
@@ -48,6 +49,8 @@ namespace DiscordRapaziada
             };
 
             Commands = Client.UseCommandsNext(commandsConfig);
+
+            Commands.RegisterCommands<FunCommands>();
 
             await Client.ConnectAsync();
 
