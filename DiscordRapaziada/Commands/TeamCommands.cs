@@ -48,15 +48,10 @@ namespace DiscordRapaziada.Commands
             var role = ctx.Guild.GetRole(746764586807722006);
 
             if (reactionResult.Result.Emoji == thumbsUpEmoji)
-            {
-                
                 await ctx.Member.GrantRoleAsync(role).ConfigureAwait(false);
-
-            } 
             else if (reactionResult.Result.Emoji == thumbsDownEmoji)
-            {
                 await ctx.Member.RevokeRoleAsync(role).ConfigureAwait(false);
-            }
+
 
             await joinMessage.DeleteAsync().ConfigureAwait(false);
         }
